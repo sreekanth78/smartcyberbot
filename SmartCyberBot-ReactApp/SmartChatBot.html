@@ -1,0 +1,57 @@
+<div id="root"></div>
+<link rel="stylesheet" href="SmartChatBot.css">
+<script src="SmartChatBot.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+<script type="text/babel">
+class Greeting extends React.Component {
+    render() {
+        return (<div>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="SmartChatBot.css" />
+  <br /><br /><table><tbody><tr /></tbody></table>
+  <div className="center1">
+    <table>
+      <tbody><tr>
+          <td>
+          </td>
+          <td>
+            <div className="dropdown" style={{backgroundColor: '#4c87af', width: '50%'}}>
+              <button className="btn btn-primary dropdown-toggle" style={{backgroundColor: '#4c63af'}} type="button" data-toggle="dropdown">Menu
+                <span className="caret" style={{backgroundColor: '#564caf'}} />
+              </button>
+              <ul className="dropdown-menu" style={{backgroundColor: '#9395f7'}}>
+                <li><a href="https://www.qnamaker.ai/Home/MyServices" target="_blank">Admin</a></li>
+                <li><a href="#">Schedule Task</a></li>
+                <li><a href="#">Execute Code</a></li>
+              </ul>
+            </div>
+          </td>
+          <td>
+            <div className="header-text">Smart Cyber Bot !!           
+              </div>
+          </td>
+            </tr>
+      </tbody></table>
+  </div>
+  <div className="center">
+    <sup><span /><img src="assets/bot-new.gif" style={{width: '20%', height: '20%'}} /></sup>
+    <textarea id="chat" style={{width: '100%', height: '50%'}} defaultValue={"Welcome to Smart Char Bot !!."} /><br />
+    <input type="text" style={{width: '100%'}} id="question" placeholder="Enter your query here" />
+    <span></span>
+    <input type="button" id="sub"defaultValue="Submit" className="button button4" onClick={synchronize}/>
+    <img src="assets/mic-animate.png" onClick={runSpeechRecognition} style={{width: '30px', height: '36px'}} />
+ 
+       </div>
+    </div>
+);
+    }
+}
+ReactDOM.render(
+    <Greeting />,
+    document.getElementById('root')
+);
+</script>
